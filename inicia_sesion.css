@@ -6,7 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #2196F3, #4CAF50);
 }
 
 .container {
@@ -137,59 +137,91 @@ body {
 
 /* Sección del formulario */
 .inicia_sesion .recordar-usuario {
-    display: flex;               /* Alinea en línea */
-    align-items: start;         /* Alinea verticalmente */
-    justify-content: start;
-    margin-top: 10px;            /* Alinea el bloque con otros elementos */
+    display: flex;
+    align-items: center; /* Alinea verticalmente al centro */
+    justify-content: flex-start; /* Alinea horizontalmente al inicio */
+    margin-top: 10px;
 }
 
-
-.inicia_sesion .recordar-usuario input {
-    margin: 0; /* Elimina cualquier margen adicional */
+.inicia_sesion .recordar-usuario label {
+    margin-right: 5px; /* Agrega un pequeño margen antes del checkbox */
+}
+#recordarcheck {
+    display: flex;
+    align-items: start;
 }
 
-
-
-
-/* res telefono */
+/* Ajustes responsivos para teléfonos */
 @media (max-width: 768px) {
     .container {
         flex-direction: column; /* Apilar verticalmente */
         width: 100%; /* Usar todo el ancho */
-        height: 100%; /* Usar toda la altura */
+        height: auto; /* Adaptar altura */
         box-shadow: none;
         max-height: none; /* Deshabilitar altura máxima */
     }
 
     .inicia_sesion {
         width: 100%; /* Usar todo el ancho */
-        padding: 20px;
+        padding: 20px; /* Relleno ajustado */
     }
 
     .verdesur {
         width: 100%; /* Usar todo el ancho */
-        margin-top: auto; /* Empujar al final */
-        padding: 10px 20px; /* Reducir el espacio interno */
-        box-shadow: none; /* Eliminar sombras en móviles */
+        padding: 15px; /* Relleno ajustado */
+        margin-top: 20px; /* Separación entre secciones */
+        box-shadow: none; /* Eliminar sombra en móviles */
     }
 
     .verdesur img {
-        width: 30%; /* Ajustar tamaño de la imagen */
-        margin: 0 auto; /* Centrar imagen */
+        width: 60%; /* Ajustar tamaño de la imagen */
+        margin-bottom: 20px; /* Añadir espacio debajo de la imagen */
     }
 
     .verdesur h1 {
-        font-size: 1.2em; /* Reducir tamaño del texto */
-        margin-bottom: 5px; /* Reducir margen */
+        font-size: 1.3em; /* Ajustar tamaño de fuente */
+        margin-bottom: 10px; /* Ajustar margen */
     }
 
     .verdesur p {
-        font-size: 0.9em; /* Ajustar el tamaño */
-        margin: 5px 0; /* Reducir márgenes */
+        font-size: 1em; /* Mantener tamaño adecuado */
+        margin: 5px 0; /* Reducir margen */
     }
 
     .verdesur button {
-        font-size: 12px; /* Reducir tamaño de texto */
-        padding: 8px; /* Reducir relleno */
+        font-size: 14px; /* Mejorar legibilidad en móviles */
+        padding: 10px; /* Relleno ajustado */
+        width: 100%; /* Botón a pantalla completa */
+        margin-top: 20px; /* Separación adecuada */
+    }
+
+    .inicia_sesion input {
+        font-size: 16px; /* Aumentar tamaño de texto */
+        padding: 12px; /* Relleno ajustado */
+        margin-bottom: 10px; /* Añadir espacio entre campos */
+    }
+
+    .inicia_sesion button {
+        font-size: 16px; /* Mejor legibilidad */
+        padding: 12px; /* Relleno ajustado */
+        width: 100%; /* Botón ocupa todo el ancho */
+    }
+
+    .inicia_sesion h1 {
+        font-size: 1.4em; /* Ajuste para pantallas pequeñas */
+        margin-bottom: 15px; /* Margen adecuado */
+    }
+
+    .inicia_sesion h3 {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+
+    .inicia_sesion form {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 }
