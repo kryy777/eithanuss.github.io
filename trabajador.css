@@ -1,0 +1,101 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80%;
+    max-height: 700px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la sección Verdesur */
+.verdesur {
+    background-color: #025250;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.verdesur img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.verdesur button {
+    padding: 10px;
+    background-color: #3d989b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.verdesur button:hover {
+    background-color: #EEE543;
+}
+
+/* Estilos para la sección Usuario */
+.usuario {
+    background-color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.usuario-img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.usuario h1 {
+    color: #025250;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.usuario button {
+    padding: 10px;
+    background-color: #3d989b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.usuario button:hover {
+    background-color: #EEE543;
+}
+

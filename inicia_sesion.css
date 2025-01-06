@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px; /* Ancho máximo para PC */
+    height: 80%; /* Altura total */
+    max-height: 700px; /* Altura máxima */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    flex-direction: row; /* Horizontal por defecto (PC) */
+}
+
+/* Sección del formulario */
+.inicia_sesion {
+    background-color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inicia_sesion h1 {
+    color: #025250;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.inicia_sesion h3 {
+    color: #555;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inicia_sesion form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inicia_sesion input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.inicia_sesion input::placeholder {
+    color: #999;
+}
+
+.inicia_sesion button {
+    padding: 10px;
+    background-color: #3d989b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    max-width: 200px;
+    margin-top: 10px;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.inicia_sesion button:hover {
+    background-color: #EEE543;
+}
+
+/* Sección verde (verdesur) */
+.verdesur {
+    background-color: #025250;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.verdesur img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.verdesur h1 {
+    font-size: 1.5em;
+    color: #EEE543;
+    margin-bottom: 10px;
+}
+
+.verdesur p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.verdesur button {
+    padding: 10px;
+    background-color: #3d989b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    max-width: 200px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.verdesur button:hover {
+    background-color: #EEE543;
+}
+
+/* Sección del formulario */
+.inicia_sesion .recordar-usuario {
+    display: flex;               /* Alinea en línea */
+    align-items: start;         /* Alinea verticalmente */
+    justify-content: start;
+    margin-top: 10px;            /* Alinea el bloque con otros elementos */
+}
+
+
+.inicia_sesion .recordar-usuario input {
+    margin: 0; /* Elimina cualquier margen adicional */
+}
+
+
+
+
+/* res telefono */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Apilar verticalmente */
+        width: 100%; /* Usar todo el ancho */
+        height: 100%; /* Usar toda la altura */
+        box-shadow: none;
+        max-height: none; /* Deshabilitar altura máxima */
+    }
+
+    .inicia_sesion {
+        width: 100%; /* Usar todo el ancho */
+        padding: 20px;
+    }
+
+    .verdesur {
+        width: 100%; /* Usar todo el ancho */
+        margin-top: auto; /* Empujar al final */
+        padding: 10px 20px; /* Reducir el espacio interno */
+        box-shadow: none; /* Eliminar sombras en móviles */
+    }
+
+    .verdesur img {
+        width: 30%; /* Ajustar tamaño de la imagen */
+        margin: 0 auto; /* Centrar imagen */
+    }
+
+    .verdesur h1 {
+        font-size: 1.2em; /* Reducir tamaño del texto */
+        margin-bottom: 5px; /* Reducir margen */
+    }
+
+    .verdesur p {
+        font-size: 0.9em; /* Ajustar el tamaño */
+        margin: 5px 0; /* Reducir márgenes */
+    }
+
+    .verdesur button {
+        font-size: 12px; /* Reducir tamaño de texto */
+        padding: 8px; /* Reducir relleno */
+    }
+}
