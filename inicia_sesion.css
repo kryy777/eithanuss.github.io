@@ -1,227 +1,199 @@
+/* Container styles */
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #2196F3, #4CAF50);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #2196F3, #4CAF50);
 }
 
 .container {
-    display: flex;
-    width: 90%;
-    max-width: 1200px; /* Ancho máximo para PC */
-    height: 80%; /* Altura total */
-    max-height: 700px; /* Altura máxima */
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    flex-direction: row; /* Horizontal por defecto (PC) */
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh;
+  max-height: 700px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 
-/* Sección del formulario */
+/* Login form section */
 .inicia_sesion {
-    background-color: white;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .inicia_sesion h1 {
-    color: #025250;
-    font-size: 1.5em;
-    text-align: center;
-    margin-bottom: 10px;
+  color: #025250;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .inicia_sesion h3 {
-    color: #555;
-    font-size: 1em;
-    text-align: center;
-    margin-bottom: 20px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .inicia_sesion form {
-    width: 100%;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input styles */
+.inicia_sesion .input-group {
+  position: relative;
+}
+
+.inicia_sesion .input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
 }
 
 .inicia_sesion input {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: white;
+  width: 80%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.inicia_sesion input::placeholder {
-    color: #999;
+.inicia_sesion input:focus {
+  outline: none;
+  border-color: #3d989b;
+  box-shadow: 0 0 0 2px rgba(61, 152, 155, 0.2);
 }
 
+/* Remember me checkbox */
+.recordar-usuario {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recordar-usuario input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.recordar-usuario label {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+/* Button styles */
 .inicia_sesion button {
-    padding: 10px;
-    background-color: #3d989b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    max-width: 200px;
-    margin-top: 10px;
-    align-self: center;
-    transition: background-color 0.3s ease;
+  background-color: #3d989b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
 }
 
 .inicia_sesion button:hover {
-    background-color: #EEE543;
+  background-color: #EEE543;
 }
 
-/* Sección verde (verdesur) */
+/* Signup section */
 .verdesur {
-    background-color: #025250;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    color: white;
-    text-align: center;
+  width: 50%;
+  background-color: #025250;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
 .verdesur img {
-    width: 50%;
-    height: auto;
-    margin-bottom: 20px;
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
 .verdesur h1 {
-    font-size: 1.5em;
-    color: #EEE543;
-    margin-bottom: 10px;
+  color: #EEE543;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .verdesur p {
-    font-size: 1em;
-    margin: 10px 0;
+  margin-bottom: 1.5rem;
+  max-width: 400px;
 }
 
 .verdesur button {
-    padding: 10px;
-    background-color: #3d989b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    max-width: 200px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
+  background-color: #3d989b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .verdesur button:hover {
-    background-color: #EEE543;
+  background-color: #EEE543;
 }
 
-/* Sección del formulario */
-.inicia_sesion .recordar-usuario {
-    display: flex;
-    align-items: center; /* Alinea verticalmente al centro */
-    justify-content: flex-start; /* Alinea horizontalmente al inicio */
-    margin-top: 10px;
-}
-
-.inicia_sesion .recordar-usuario label {
-    margin-right: 5px; /* Agrega un pequeño margen antes del checkbox */
-}
-#recordarcheck {
-    display: flex;
-    align-items: start;
-}
-
-/* Ajustes responsivos para teléfonos */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Apilar verticalmente */
-        width: 100%; /* Usar todo el ancho */
-        height: auto; /* Adaptar altura */
-        box-shadow: none;
-        max-height: none; /* Deshabilitar altura máxima */
-    }
+  .container {
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+  }
 
-    .inicia_sesion {
-        width: 100%; /* Usar todo el ancho */
-        padding: 20px; /* Relleno ajustado */
-    }
+  .inicia_sesion,
+  .verdesur {
+    width: 100%;
+    padding: 1.5rem;
+  }
 
-    .verdesur {
-        width: 100%; /* Usar todo el ancho */
-        padding: 15px; /* Relleno ajustado */
-        margin-top: 20px; /* Separación entre secciones */
-        box-shadow: none; /* Eliminar sombra en móviles */
-    }
+  .verdesur {
+    padding-top: 2rem;
+  }
 
-    .verdesur img {
-        width: 60%; /* Ajustar tamaño de la imagen */
-        margin-bottom: 20px; /* Añadir espacio debajo de la imagen */
-    }
+  .verdesur img {
+    width: 30%;
+    height: 30%;
+  }
 
-    .verdesur h1 {
-        font-size: 1.3em; /* Ajustar tamaño de fuente */
-        margin-bottom: 10px; /* Ajustar margen */
-    }
+  .inicia_sesion button,
+  .verdesur button {
+    width: 80%;
+    max-width: none;
+  }
 
-    .verdesur p {
-        font-size: 1em; /* Mantener tamaño adecuado */
-        margin: 5px 0; /* Reducir margen */
-    }
-
-    .verdesur button {
-        font-size: 14px; /* Mejorar legibilidad en móviles */
-        padding: 10px; /* Relleno ajustado */
-        width: 100%; /* Botón a pantalla completa */
-        margin-top: 20px; /* Separación adecuada */
-    }
-
-    .inicia_sesion input {
-        font-size: 16px; /* Aumentar tamaño de texto */
-        padding: 12px; /* Relleno ajustado */
-        margin-bottom: 10px; /* Añadir espacio entre campos */
-    }
-
-    .inicia_sesion button {
-        font-size: 16px; /* Mejor legibilidad */
-        padding: 12px; /* Relleno ajustado */
-        width: 100%; /* Botón ocupa todo el ancho */
-    }
-
-    .inicia_sesion h1 {
-        font-size: 1.4em; /* Ajuste para pantallas pequeñas */
-        margin-bottom: 15px; /* Margen adecuado */
-    }
-
-    .inicia_sesion h3 {
-        font-size: 1.1em;
-        margin-bottom: 20px;
-    }
-
-    .inicia_sesion form {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+  .inicia_sesion input {
+    font-size: 16px; 
+  }
 }
