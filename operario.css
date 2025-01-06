@@ -1,26 +1,29 @@
+/* Base styles */
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #2196F3, #4CAF50);
+    padding: 1rem;
 }
 
+/* Container */
 .container {
     display: flex;
     width: 90%;
-    max-width: 1200px; /* Ajustar el ancho máximo */
-    height: 80%; /* Reducir la altura total */
-    max-height: 700px; /* Altura máxima */
-    background-color: white;
+    max-width: 1200px;
+    min-height: 600px;
+    background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Verdesur section */
 .verdesur {
     background-color: #025250;
     width: 50%;
@@ -28,36 +31,62 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 2rem;
 }
 
+.verdesur img {
+    width: 50%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+/* Usuario section */
 .usuario {
-    background-color: white;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 2rem;
+    background-color:#ffffff;
 }
 
-.verdesur img {
-    width: 50%;
-    height: auto;
-    margin-bottom: 20px;
+.usuario-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
 }
 
+.usuario h1 {
+    color: #025250;
+    font-size: 1.5em;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.usuario h4 {
+    color: #333;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Button styles */
 .verdesur button,
 .usuario button {
-    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    padding: 0.75rem;
     background-color: #3d989b;
-    color: white;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
-    max-width: 200px;
-    margin-top: 10px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .verdesur button:hover,
@@ -65,16 +94,74 @@ body {
     background-color: #EEE543;
 }
 
-.usuario-img {
-    width: 120px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 15px;
+/* Tablet Responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .verdesur,
+    .usuario {
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+
+    .verdesur img {
+        width: 40%;
+        margin-bottom: 1.5rem;
+    }
+
+    .usuario-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .verdesur button,
+    .usuario button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
 }
 
-.usuario h1 {
-    color: #025250;
-    font-size: 1.2em;
-    text-align: center;
-    margin-top: 10px;
+/* Mobile Responsive */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .verdesur,
+    .usuario {
+        padding: 1.5rem 1rem;
+    }
+
+    .verdesur img {
+        width: 60%;
+        max-width: 180px;
+    }
+
+    .usuario-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .usuario h1 {
+        font-size: 1.2em;
+    }
+
+    .usuario h4 {
+        font-size: 0.9em;
+    }
+
+    .verdesur button,
+    .usuario button {
+        padding: 0.875rem;
+        font-size: 0.9rem;
+        margin-top: 0.75rem;
+    }
 }
