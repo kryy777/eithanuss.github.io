@@ -10,6 +10,17 @@ body {
   color: #333;
   min-height: 100vh;
   overflow-x: hidden;
+  opacity: 0;
+  animation: fadeInPage 0.5s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .container {
@@ -27,17 +38,29 @@ body {
   text-align: center;
   position: relative;
   transform-style: preserve-3d;
+  animation: contentAppear 1s ease-out forwards;
+}
+
+@keyframes contentAppear {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .title {
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 .animate-text {
@@ -48,16 +71,57 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 0.5rem;
+  will-change: transform, opacity;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.animate-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #4a4a4a, transparent);
+  transform: scaleX(0);
+  animation: lineReveal 0.8s ease-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes lineReveal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 .delay-1 {
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
+}
+
+.delay-1::after {
+  animation-delay: 1.3s;
 }
 
 .skeleton-container {
   margin: 2rem 0;
   position: relative;
   transform-style: preserve-3d;
+  animation: containerAppear 0.8s ease-out forwards;
+}
+
+@keyframes containerAppear {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .skeleton {
@@ -65,78 +129,72 @@ body {
   height: auto;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
   transition: transform 0.3s ease;
+  will-change: transform;
+  animation: skeletonEntrance 1s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+}
+
+@keyframes skeletonEntrance {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) rotateY(-45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
 }
 
 .skeleton:hover {
   transform: scale(1.05) rotate(2deg);
 }
 
-.animate-skeleton {
-  opacity: 0;
-  transform: translateX(-50px) rotateY(-20deg);
-  animation: slideInRotate 1.2s cubic-bezier(0.215, 0.610, 0.355, 1) 0.8s forwards;
-}
-
 .footer {
   margin-top: 3rem;
   opacity: 0;
   transform: translateY(20px);
-  animation: pulseIn 1s cubic-bezier(0.215, 0.610, 0.355, 1) 1.5s forwards;
+  animation: footerAppear 0.8s cubic-bezier(0.215, 0.610, 0.355, 1) 0.5s forwards;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
+  will-change: transform, opacity;
+}
+
+@keyframes footerAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .logo {
   max-width: 200px;
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
+  animation: logoAppear 0.8s cubic-bezier(0.215, 0.610, 0.355, 1) 0.8s both;
+}
+
+@keyframes logoAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .logo:hover {
   transform: scale(1.1);
 }
 
-@keyframes fadeInUpRotate {
-  from {
-    opacity: 0;
-    transform: translateY(50px) rotateX(-30deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) rotateX(0);
-  }
-}
 
-@keyframes slideInRotate {
-  from {
-    opacity: 0;
-    transform: translateX(-100px) rotateY(-45deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0) rotateY(0);
-  }
-}
-
-@keyframes pulseIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateY(10px) scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* BASTIAN AZOCAR ULAGOS ICINF */
 .skeleton-container::after {
   content: '';
   position: absolute;
@@ -158,10 +216,10 @@ body {
   }
 }
 
-/* BASTIAN AZOCAR ULAGOS ICINF */
+
 @media (max-width: 768px) {
   .title {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     margin-bottom: 1.5rem;
   }
   
@@ -183,10 +241,10 @@ body {
   }
 }
 
-/* BASTIAN AZOCAR ULAGOS ICINF */
+
 @media (max-width: 480px) {
   .title {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
   }
   
   .skeleton {
@@ -202,14 +260,14 @@ body {
   }
 }
 
-/* BASTIAN AZOCAR ULAGOS ICINF */
+
 @media (max-height: 600px) and (orientation: landscape) {
   .container {
     padding: 1rem;
   }
   
   .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   
@@ -223,7 +281,7 @@ body {
   }
 }
 
-/* BASTIAN AZOCAR ULAGOS ICINF */
+
 @media (prefers-color-scheme: dark) {
   body {
     background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
@@ -240,3 +298,5 @@ body {
     -webkit-text-fill-color: transparent;
   }
 }
+
+/* BASTIAN AZOCAR - ICINF ULAGOS OSORNO*/
