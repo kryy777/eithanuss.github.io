@@ -74,6 +74,19 @@ body {
   will-change: transform, opacity;
   text-transform: uppercase;
   position: relative;
+  width: 100%;
+  display: block;
+}
+
+@keyframes fadeInUpRotate {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotateX(-30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
 }
 
 .animate-text::after {
@@ -219,8 +232,19 @@ body {
 
 @media (max-width: 768px) {
   .title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .animate-text {
+    font-size: 3rem;
+    padding: 0.3rem;
+    background: linear-gradient(45deg, #000000, #333333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    opacity: 1;
   }
   
   .skeleton {
@@ -244,7 +268,15 @@ body {
 
 @media (max-width: 480px) {
   .title {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .animate-text {
+    font-size: 2.5rem;
+    padding: 0.2rem;
+    letter-spacing: 1px;
   }
   
   .skeleton {
@@ -267,8 +299,13 @@ body {
   }
   
   .title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
+  }
+  
+  .animate-text {
+    font-size: 2.2rem;
+    padding: 0.2rem;
   }
   
   .skeleton {
@@ -297,6 +334,12 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  
+  @media (max-width: 768px) {
+    .animate-text {
+      background: linear-gradient(45deg, #ffffff, #dddddd);
+    }
+  }
 }
 
-/* BASTIAN AZOCAR - ICINF ULAGOS OSORNO*/
+/* Bastian Azocar ULAGOS ICINF*/
