@@ -242,7 +242,7 @@ body {
     padding: 0.3rem;
     background: linear-gradient(45deg, #ffffff, #dddddd);
     -webkit-background-clip: text;
-    color: #fff; /* Cambio aquí para mejor visibilidad */
+    -webkit-text-fill-color: transparent; /* Hace que el gradiente se vea en el texto */
     text-shadow: none;
     opacity: 1;
   }
@@ -273,13 +273,13 @@ body {
   }
   
   .animate-text {
-    font-size: 2.8rem;
-    padding: 0.2rem;
-    letter-spacing: 1px;
-    background: linear-gradient(45deg, #ffffff, #cccccc);
+    font-size: 3rem;
+    padding: 0.3rem;
+    background: linear-gradient(45deg, #ffffff, #dddddd);
     -webkit-background-clip: text;
-    color: #fff; /* Cambio aquí para mejor visibilidad */
+    -webkit-text-fill-color: transparent; /* Hace que el gradiente se vea en el texto */
     text-shadow: none;
+    opacity: 1;
   }
   
   .skeleton {
@@ -306,13 +306,15 @@ body {
   }
   
   .animate-text {
-    font-size: 2.5rem;
-    padding: 0.2rem;
-    background: linear-gradient(45deg, #ffffff, #bbbbbb);
+    font-size: 3rem;
+    padding: 0.3rem;
+    background: linear-gradient(45deg, #ffffff, #dddddd);
     -webkit-background-clip: text;
-    color: #fff; /* Cambio aquí para mejor visibilidad */
+    -webkit-text-fill-color: transparent; /* Hace que el gradiente se vea en el texto */
     text-shadow: none;
+    opacity: 1;
   }
+
   
   .skeleton {
     max-width: 220px;
