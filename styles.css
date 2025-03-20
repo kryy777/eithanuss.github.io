@@ -344,10 +344,6 @@ body {
     -webkit-text-fill-color: transparent;
   }
   
-  @media (max-width: 768px) {
-    .animate-text {
-      background: linear-gradient(45deg, #ffffff, #dddddd);
-    }
   }
 }
 
