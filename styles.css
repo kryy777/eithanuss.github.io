@@ -136,7 +136,7 @@ body {
   }
 }
 
-/* Floating animation for the skeleton */
+/* BASTIAN AZOCAR ULAGOS ICINF */
 .skeleton-container::after {
   content: '';
   position: absolute;
@@ -183,7 +183,7 @@ body {
   }
 }
 
-/* Small mobile devices */
+/* BASTIAN AZOCAR ULAGOS ICINF */
 @media (max-width: 480px) {
   .title {
     font-size: 2.2rem;
@@ -202,7 +202,7 @@ body {
   }
 }
 
-/* Landscape orientation */
+/* BASTIAN AZOCAR ULAGOS ICINF */
 @media (max-height: 600px) and (orientation: landscape) {
   .container {
     padding: 1rem;
@@ -223,7 +223,7 @@ body {
   }
 }
 
-/* Dark mode support */
+/* BASTIAN AZOCAR ULAGOS ICINF */
 @media (prefers-color-scheme: dark) {
   body {
     background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
