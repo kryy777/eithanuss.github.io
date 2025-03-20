@@ -244,7 +244,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Hace que el gradiente se vea en el texto */
     text-shadow: none;
-    opacity: 1;
+    opacity: 0;
   }
   
   .skeleton {
@@ -279,7 +279,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Hace que el gradiente se vea en el texto */
     text-shadow: none;
-    opacity: 1;
+    opacity: 0;
   }
   
   .skeleton {
@@ -312,7 +312,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Hace que el gradiente se vea en el texto */
     text-shadow: none;
-    opacity: 1;
+    opacity: 0;
   }
 
   
